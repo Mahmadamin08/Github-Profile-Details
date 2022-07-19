@@ -31,7 +31,7 @@ function CreateCard(user) {
     const Card =
         `
      <div id="card">
-        <div>
+        <div class="imgg">
             <img src="${user.avatar_url}" alt="${user.name}" class="photo">
         </div>
         
@@ -41,9 +41,9 @@ function CreateCard(user) {
             <p>${user.bio}</p>
 
             <ul class="info">
-                <li>Followers: ${user.followers}</li>
-                <li>Following: ${user.following}</li>
-                <li>Repos: ${user.public_repos}</li>
+                <li>${user.followers} <strong>Followers</strong></li>
+                <li>${user.following} <strong>Following</strong></li>
+                <li>${user.public_repos} <strong>Repos</strong></li>
             </ul>
 
             <div id="repos"></div>
